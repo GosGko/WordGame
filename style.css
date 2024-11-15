@@ -1,0 +1,93 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    display: block;
+    text-align: center;
+    padding-top: 250px;
+}
+
+#start-page, #game-page {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    transition: all 0.3s ease-in-out;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px 5px;
+    color: #ffffff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 1em;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    width: 50%;
+    margin: 10px 0;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #2980b9;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #e74c3c;
+}
+
+#best-score {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+button, input[type="text"], #message {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#game-page.hidden, #start-page.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.3s ease-in-out;
+}
+
